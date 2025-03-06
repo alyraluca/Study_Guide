@@ -120,6 +120,11 @@ Undo 'add .'/stage command:
 ```
 $ git reset
 ```
+Devolver un fichero al último estado/commit sin los cambios más recientes:
+```
+$ git chekout fichero.py
+```
+
 Undo a 'commit' / unstage last commit:
 ```
 $ git reset HEAD~1
@@ -191,3 +196,61 @@ $ eval "$(ssh-agent -s)" && ssh-add ~/.ssh/testkey
 
 Once we pushed changes to github from a different branch (`branching`), on github.com we get asked if we want to `open a pull request`.
 The owner gets to `merge pull request`
+
+-----------------------------
+### Curso git 5h
+
+Listar todos los directorios:
+```
+$ ls
+```
+
+Deplazarse
+```
+$ cd + tab
+```
+
+Saber la ruta donde estoy:
+```
+$ pwd
+```
+
+Crear carpeta
+```
+$ mkdir "Nombre carpeta"
+```
+
+Configurar git en mi equipo:
+```
+$ git config --global user.name "nombre_usuario"
+$ git config --global user.email "email_usuario"
+```
+
+Cambiar nombre de la rama de 'master' a 'main':
+```
+$ git branch -m main
+```
+
+Ver todos los commits:
+```
+$ git log
+```
+
+Ver los logs de diferente maneras
+```
+$ git log --graph
+$ git log --graph --pretty=oneline
+$ git log --graph --decorate --all --oneline
+```
+
+Configurar un shortcut/comando que se utilizan mucho
+```
+$ git config --global alias.tree "log --graph --decorate --all --oneline"
+```
+
+Ignorar tipo de ficheros creando un fichero llamado .gitignore y añadiendo estos tipos a él:
+```
+$ touch .gitignore
+$ **/.DS_Store
+```
+
