@@ -120,12 +120,12 @@ Undo 'add .'/stage command:
 ```
 $ git reset
 ```
-Devolver un fichero al último estado/commit sin los cambios más recientes:
+Devolver un fichero al último estado/commit o a un commit en concreto:
 ```
-$ git chekout fichero.py
+$ git checkout fichero.py (deshacer los cambios hechos desde el último commit)
+$ git checkout cd7r38874 (mover el head a ese commit, mientras, el main se queda donde estaba)
 ```
-
-Undo a 'commit' / unstage last commit:
+Undo a commit/ unstage last commit:
 ```
 $ git reset HEAD~1
 ```
@@ -137,9 +137,14 @@ See a log of all your commits and hash code:
 ```
 $ git log
 ```
-Undo a push and remove all the changes made  :
+Undo a commit and remove all the changes made and put the 'HEAD' at this point/hash/commit.
+También funciona si queremos ir para adelante, por si nos hemos ido demasiado atras sin querer:
 ```
-$ git reset --hard 32jk432jb5j345hj435vhj (hash of the commit)
+$ git reset --hard 32jk432jb (hash of the commit)
+```
+Historial completo de interacciones hechos con git para recuperar los hash si hemos hecho un reset hard:
+```
+$ git reflog
 ```
 
 **7. Autentification SSH**
@@ -250,7 +255,83 @@ $ git config --global alias.tree "log --graph --decorate --all --oneline"
 
 Ignorar tipo de ficheros creando un fichero llamado .gitignore y añadiendo estos tipos a él:
 ```
-$ touch .gitignore
-$ **/.DS_Store
+$ touch .gitignore (crear fichero)
+$ **/.DS_Store (añadir esto al fichero)
 ```
 
+Etiquetar commits para decir que asta este punto es muy importante:
+```
+$ git tag clase_1
+```
+Movernos/mover el head a un tag más rápidos:
+```
+$ git checkout tags/clase_1
+```
+Mover el head donde está el main:
+```
+$ git checkout main
+```
+
+#### Branching
+
+Crear una rama:
+```
+$ git branch "login
+```
+Movernos por las ramas
+```
+$ git switch login
+```
+Se puede mover con un ``checkout`` pero no es lo más recomendable
+
+#### Git merge
+
+Desde una rama diferente (rama `login`) a la del main, cargar/pull y merge/combinar los cambios del main para seguir trabajando y no quedarme atras, por si otros de otras ramas estan haciendo cambios y subiendolos a la vez:
+```
+$ git merge main
+```
+
+**Conflictos de merge**
+Conflictos cuando se quiere hacer un merge desde el main y nosotros hemos tocado un fichero que no deberiamos.
+Se solucionan desde visual studio, borrando lo que no se quiera y dejando lo que si quiero.
+
+**Git stash**
+Para guardar un punto, el cual no queremos hacer commit porque aun no está acabado.
+COmo un commit pero no tan permanente:
+```
+$ git stash
+```
+Mirar los stash guardados
+```
+$ git stash list
+```
+Recuperar el último stash guardado
+```
+$ git stash pop
+```
+Borrar un stash
+```
+$ git stash drop
+```
+
+**Reintegración en ramas**
+Reintegrar la rama secundaria en el main
+
+Como saber si hay conflictos con el login, desde main:
+```
+$ git diff login (desde main)
+```
+Traer una rama secundaria (login) en la main:
+```
+$ git merge login
+```
+
+**Eliminar ramas**
+```
+$ git branch -d login
+```
+
+**Git hub**
+
+min 2:43:04
+[Video link](https://www.youtube.com/watch?v=3GymExBkKjE&list=PLHjomGb8H-NkPadTSJPqTYgWEptCFCPoX&index=2)
