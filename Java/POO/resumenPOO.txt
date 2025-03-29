@@ -1,0 +1,165 @@
+---------INSTANCIAR OBJETOS----------
+
+//Instanciar un objeto en Main
+	Poal p1 = new Poal();//instanciar
+	p1.x = 5;//darle valores
+
+	Punt punto1 = new Punt(5,0); //Instanciar y asignarle valores
+
+//Modificar los atributos de un objeto (en Main) si sus atributos son 'private' en la clase objeto	
+	punto1.setX(punto1.getX() + 3);//en Main
+
+	//Clase Punt con los atributos 'private
+	public class Punt {
+		private int x,y;
+
+//Utilizar una funcion de la clase del objeto
+	punto1.imprimeix(); //Main
+
+	public void imprimeix() {
+		System.out.println("Les coordenades son: x " + this.x + " , y " + this.y );} // Clase 'Punt'
+	
+//Crea una  funcion (static) para crear un nuevo objeto con puntos aleatorios 
+	public static Punt creaPuntoAleatorio() {
+		Random r = new Random();
+		Punt p = new Punt(-100 + r.nextInt(200), -100 + r.nextInt(200));
+		return p;}
+
+//Instanciamos objeto y asignamos valores
+	Persona persona1 = new Persona("18999548P", "Josep", "Serrà Ferrandis", 25);
+
+//Guardar los atributos en un String
+	String cadena1 = persona1.nom + " " + persona1.cognoms + " amb DNI " + persona1.dni;
+
+//Añadimos otro trozo de String a la cadena segun una condición
+	if (persona1.edat >= 18) {
+            cadena1 += " és major d'edat";
+
+// Retorna TRUE si està jubilat
+    public boolean esJubilat() {
+        return this.edat >= 65;
+
+//Devuelve la diferencia de edat entre este objeto y el recibido
+    public int diferenciaEdat(Persona p) {
+        return this.edat - p.edat;
+
+//Imprimir y mostrar atributos de un objeto
+	public void mostra() {
+        	System.out.println("DNI: " + this.dni);
+        	System.out.println("Nom: " + this.nom);
+        	System.out.println("Cognoms: " + this.cognoms);
+        	System.out.println("Edat: " + this.edat);
+
+// Funció que rep un DNI i retorna si és vàlid o no. COMPTE!! no comprova que la lletra siga correcta!
+    public static boolean validarDNI(String valor) {
+        // Expresió regular que indica 8 dígits i al final alguna de les lletres que se permeten
+        // rangs A-H J-N P-T V-Z (recordeu, algunes no se permeten)
+        	String dniRegexp = "\\d{8}[A-HJ-NP-TV-Z]";
+        // Retorna true si se compleix la expresió regular
+        	return Pattern.matches(dniRegexp, valor);
+
+//Validem els DNIs
+        System.out.println("DNI 12345678Z => " + ((Persona.validarDNI("12345678Z")) ? "Valido" : "No vàlid") );
+
+//Creamos un array de puntos aleatorios
+	Punt puntos[] = new Punt[20];		
+	for (int i=0;i<20; i++) {
+		puntos[i] = Punt.creaPuntoAleatorio();
+		System.out.println(" Punt aleatori " + i + ": ");
+		puntos[i].imprimeix();
+
+---------VISIBILIDAD---------		
+
+//Tipus de access (visibilidad)
+	public: Es pot utilitzar des de qualsevol classe.
+	private: Només pot utilitzar-ho la pròpia classe.
+	protected: Pot utilitzar-ho la pròpia classe i també les subclasses heretades
+	
+
+
+------------ARRAYS--------------
+
+//Definir Array de objectes (dos maneras)
+	NomDeLaClasse [] Objectes;
+	NomDeLaClasse Objectes[];
+
+//Instanciar un Array de Objectes
+	Objectes = new NomDeLaClasse[nr];
+	
+//Definir y Instanciar un array de objectes a la vez (de 2 maneras)
+	NomDeLaClasse [] Objectes = new NomDeLaClasse[n];
+	NomDeLaClasse Objectes[] = new NomDeLaClasse[n];
+
+
+
+--------------FUNCIONES---------------
+
+//Perimetro de un rectangulo con dos costats desde el Main
+	public static double perimetre(Rectangle rect) {
+       	 int costat1 = Math.abs(rect.x1 - rect.x2);
+       	 int costat2 = Math.abs(rect.y1 - rect.y2);
+	 return (costat1 + costat2) * 2;
+// Obtindre el perímetre 2.0 version desde la clase del objeto
+    public int getPerimetre() {;
+        return abs(this.x1 - this.x2) * 2 + abs(this.y1 - this.y2) * 2;
+    }
+
+--------------------------------------------
+
+//Area del rectangulo desde el Main
+	public static double area(Rectangle rect) {
+         int costat1 = Math.abs(rect.x1 - rect.x2);
+         int costat2 = Math.abs(rect.y1 - rect.y2);
+         return costat1 * costat2;
+// Obtindre l'àrea version 2.0 desde la clase objeto
+    public int getArea() {
+        return abs(this.x1 - this.x2) * abs(this.y1 - this.y2);
+
+
+//Comprovar si es un rectangulo valido (si no es no lo accepta y no crea un objeto) desde la clase objeto
+	public Rectangle(int x1, int y1, int x2, int y2) {
+         if ((x1 < x2) && (y1 < y2)) {
+            this.x1 = x1;
+            this.y1 = y1;
+            this.x2 = x2;
+            this.y2 = y2;
+        } else {
+            System.err.println("ERROR al instanciar el Rectangle (" + x1 + "," + y1 + "),(" + x2 + "," + y2 + ")");
+
+//Generar un rectangulo con coordenadas entre 0 y 100
+	public static Rectangle generarRectangle() {
+        	Random r = new Random();
+        	int a, b, c, d;
+        	a = r.nextInt(Rectangle.max);
+        	b = r.nextInt(Rectangle.max);
+        	c = min(100, a + r.nextInt(Rectangle.max));
+        	d = min(100, b + r.nextInt(Rectangle.max));
+        	Rectangle tmp = new Rectangle(a, b, c, d);
+        	return tmp;
+
+//Clase estado aparcamiento
+	public enum Estat {
+    LLIURE, OCUPADA
+
+
+//Proceso de entrada en un aparcamiento (función)
+	public void processaEntrada (String matricula){
+        	placesOcupades++;    
+        	placesLliures--;
+        	this.estat = Estat.OCUPADA;
+        	this.matricula=matricula;
+
+
+
+//Proceso de salida en un aparcamiento (función)
+	public void processaEixida (){
+        	placesOcupades--;    
+        	placesLliures++;
+        	this.estat = Estat.LLIURE;
+        	this.matricula=null;    
+
+//
+
+
+
+

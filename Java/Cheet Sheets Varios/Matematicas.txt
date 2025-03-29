@@ -1,0 +1,89 @@
+Area quadrado: costat*costat 
+Circumferencia = 2*radio*Math.PI
+
+Area circulo = Pi * radio * radio
+Area circulo = radi * radi * Math.PI;
+	
+Volumen circulo = 4/3*Pi*radio*radio*radio
+	Volum = Math.pow(radi, 3) * Math.PI * 4/3;
+	
+Volum cilindre = PI * r *r * h
+
+Area rectangulo
+	alt*ample
+
+Perimetro rectangulo 
+	(area*2)+(ample*2)
+----------------------
+Millas a quilometros
+----------------------
+millas* 1.60934
+
+----------------------
+Quilometros a millas
+----------------------
+quilometros*0.6214
+
+Math.pow(3,3);  // Potencia 3^3
+Math.sqrt(9);   // Arrel quadrada de 9
+Math.PI;
+Math.E;
+
+Math.sin(angle);  // seno d’un angle
+Math.cos(90); // Coseno
+Math.tan(90); // Tangente
+
+double max = Math.max(3.5, 1.2); //Valor maximo entre dos valores
+double min = Math.min(3.5, 1.2); //Valor minimo entre 2 valores
+Math.abs(-3); //Obtener el valor absoluto
+Math.ceil(3.6); //Redondear 'hacia arriba' el entero más cercano (4)
+Math.floor(3.7); //Redondear hacia abajo el entero más cercano (3)
+Math.round(4.8); //Redondear al entero mas cercano (5)
+
+ 
+Descuento articulo =  ((preuArticle-preuVenta)*100)/preuArticle
+
+
+Les hores que passen de 35 es paguen a 1,5 vegades la tarifa normal
+		salari = 35 * tarifa + (hores - 35) * (tarifa * 1.5);
+
+
+System.out.println(Math.random()); 
+	Exemple: Si volem generar valors aleatoris entre 0 i 10 (incloent-hi el 0 i sense arribar a 10)
+		System.out.println( Math.random()*10);	
+		
+
+
+FACTORIAL de un numero introducido por teclado sent el factorial:
+	0! = 1
+	1! = 1
+	2! = 2 * 1
+	3! = 3 * 2* 1
+	N! = N * (N-1) * (N-2)........* 3*2*1
+SOLUCIÓ
+factorial=1;
+        for (i=numero; i>1; i--){
+            factorial=factorial*i;
+
+
+
+cantidad = cantidad%n; 
+		(cantidad es igual al residuo de la división entre cantidad y n)
+			
+
+Numeros primos: 
+	- un numero es primo solo si es divisible por si mismo y 1 (sin tener residuo).
+	- el 1 no es primo
+	- el 2 y el 3 si son primos
+
+Como dar la vuelta a un numero y separarlo por digitos:
+	Girar nr.: reves = 0;
+				auxiliar = numero;
+				longitud=0;
+				while (auxiliar>0){
+					reves = (reves*10) + (auxiliar%10);     // Extrau digit més baix i el posa com el més alt en reves
+					auxiliar = auxiliar/10;                 // Llevem el digit més baix i procesem la resta del número
+					longitud++;
+				}
+	Extraer cada digito (extra: comprovar si es parell):
+		

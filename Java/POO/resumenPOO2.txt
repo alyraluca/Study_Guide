@@ -1,0 +1,115 @@
+
+------------COMPOSICIÓ---------------
+'compuesta por' 'tiene'
+
+//Una clase de un OBJETO que contiene otros OBJETOS
+	public class CompteBancari { 
+		Persona titular; 
+		double saldo;
+		Moviment moviments[];
+		Persona autoritzats[];
+
+//CLasses y metodos
+	Una classe final no pot ser heretada.
+	Un mètode final no pot ser sobreescrit per les subclasses
+
+//Clase 'abstract'
+		No es por instanciar
+-------------HERENCIA / EXTENDS----------------
+'Derivar una nueva clase a partir de otra y heredar sus atributos'
+superclase -> subclase
+
+//Subclasse 'au' pertenece a la superclase 'animal'
+	class Au extends Animal {
+	
+	// Constructor bàsic
+	public Au(Tipus tipus, Sexe sexe) {
+	super();
+	this.sexe=sexe;
+	// Constructor complet
+	public Au(Tipus tipus, Sexe sexe, Cobert cobert) {
+	super(tipus, sexe);
+	this.sexe=sexe;
+	this.cobert=Cobert.PLOMES;
+
+
+-------------POLIMORFISME---------------
+Selecció dinàmica de mètodes: mecanisme mitjançant el qual l’anomenada 
+a un mètode sobreescrit es resol en temps d'execució i no durant la compilació.
+
+
+
+--------------CLASES ABSTRACTES-------------
+No es pot instanciar pero si es pot heretar
+
+
+-----------INTERFICIES----------------------
+Es una declaración d'atributs i mètodes sense implementació
+	public interface Nom {
+		// Declaració d'atributs i mètodes (sense definir codi)
+		}
+		
+
+
+-----------------ARRAY LISTS---------------------------
+
+// Creación de l'ArrayList i ús del mètode size per a vore el tamany
+	ArrayList<String> colors = new ArrayList<String>();
+	System.out.println("Nombre d'elements: " + colors.size());
+
+//Metodos de ArayList
+	int size(); nombre d'elements de la llista.
+	E get(intindex); element en la posició index.
+	void lear(); elimina tots els elements de la llista.
+	boolean isEmpty(); truesi la llista no conté elements.
+	boolean add(E element); inserida element al final de la llista.
+	void add(intindex, E element); inserida element en una posició de la llista. Desplaça una posició tots els altres elements de la llista.
+	void set(intindex, E element); substitueix l'element en la posició index.
+	boolean contains(Objecto); cerca l'objecte en lallista.
+	int indexOf(Objecto); retorna l'índex on se trobel’objecte.
+	int lastIndexOf(Objecto); com indexOf() però des del final de la llista.
+	E remove(intindex); elimina l'element en la posició.
+	boolean remove(Objectobj); elimina la primera ocurrència de l’objecte
+	
+// Afegim els primers elements amb add i mostrem tamany amb size
+	colors.add("roig");
+	colors.add("verd");
+	colors.add("blau");
+	System.out.println("Nombre d'elements: " + colors.size());
+
+// Mostrar la llista de forma bàsica
+	System.out.println("Contingut de la llista: " + colors);
+	
+// Afegim un element en una posició determinada
+	colors.add(1, "violeta");
+	
+// Mostrem els elements que hi ha en una posició amb el mètode get
+	System.out.println("L'element que hi ha en la posició 0 és " + colors.get(0));
+
+// Verifiquem en quina posició de l'ArrayList està un element amb el mètode indexOf
+	System.out.println("El blanc està en la posició " + ((int)colors.indexOf("blanc") + 1));
+
+// Eliminem un element pel contingut i un altre per la posició amb el mètode remove
+	colors.remove("blanc");
+	colors.remove(2);
+	
+// Canviem el color de una posició determinada amb el mètode set
+	colors.set(2, "turquesa");
+
+// Mostrar la llista utilitzant un for
+	System.out.print("Contingut de la lista utilitzant FOR: ");
+	for(int i=0; i<colors.size(); i++) {
+	System.out.print(colors.get(i) + " ");
+
+// Mostrar la llista utilitzant un for a l'estil foreach
+	System.out.print("Contingut de la lista utilitzant FOREACH: ");
+	for(String color: colors) {
+	System.out.print(color + " ");
+	
+// Recorrer la llista utilitzant l'objecte ITERATOR
+	System.out.println("Contingut de la lista utilitzant ITERATOR: ");
+		Iterator iter = lista.iterator();
+		while( iter.hasNext()) {
+			Producte p = (Producte)iter.next();
+			System.out.println(p.GetNom() + " , " + p.GetQuantitat());
+

@@ -1,0 +1,480 @@
+switch (expression) {
+    case value1:
+        // Code to be executed if expression equals value1
+        break;
+    case value2:
+        // Code to be executed if expression equals value2
+        break;
+    // Additional cases as needed
+    default:
+        // Code to be executed if none of the cases match the expression
+}
+
+---------------------------------------------------------------------------------------
+//Pide numeros hasta que se introduzca 0
+---------------------------------------------------------------------------------------
+	System.out.println("Introdueix nombres enters (introdueix 0 per acabar):");
+
+        int num;
+        do {
+            num = scanner.nextInt();
+            if (num != 0) {
+                numeros.add(num);
+            }
+        } while (num != 0);
+---------------------------------------------------------------------------------------
+LINE BREAK
+---------------------------------------------------------------------------------------
+
+System.out.print("Elije algunas de las opciones del menu: "
+    	+ "\n1. Mostrar valors"
+    	+ "\n2. Introduir valors"
+    	+ "\n3. Eixir");
+
+---------------------------------------------------------------------------------------
+//Averiguar el total de valores en un array antes de llenarlo (1,2,2,3,3,3...10)
+---------------------------------------------------------------------------------------
+int maxValors = 10;
+int totalValors = (maxValors*(maxValors+1))/2;
+int vector[]= new int[totalValors];
+
+---------------------------------------------------------------------------------------
+ARRAYS && STRING
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+// DIVIDIR la frase.String en paraules i guardarla en un array tipo String
+---------------------------------------------------------------------------------------
+        paraulesFrase = frase.split(" ");
+
+---------------------------------------------------------------------------------------
+// Comprovació de les frases
+---------------------------------------------------------------------------------------
+	(frase1.equals(frase2))
+	(frase1.equalsIgnoreCase(frase2))
+
+---------------------------------------------------------------------------------------
+//codi d'usuariformat per la concatenació de les tres primeres lletres de cada nom y cognom 
+---------------------------------------------------------------------------------------
+	codi = nom.substring(0, 3) + cognom1.substring(0, 3) + 				cognom2.substring(0, 3);
+        System.out.println("El codi és " + codi.toUpperCase());
+
+---------------------------------------------------------------------------------------
+// Transformem la frase a minúscules
+---------------------------------------------------------------------------------------
+        frase = frase.toLowerCase();
+
+---------------------------------------------------------------------------------------
+//Process every char of a String
+---------------------------------------------------------------------------------------
+	for (i = 0; i < frase.length(); i++) {
+            switch (frase.charAt(i))
+
+---------------------------------------------------------------------------------------
+//Aconsegueix un array de caràcters a partir d'una cadena.
+---------------------------------------------------------------------------------------
+	frase.toLowerCase();
+	    	 char polindrom[]=frase.toCharArray();
+
+---------------------------------------------------------------------------------------
+//Quitar los espacios a un Array
+---------------------------------------------------------------------------------------
+	frase = frase.replace(" ", "");
+
+---------------------------------------------------------------------------------------
+// Generem la frase del reves i comparem si es igual que de normal
+y lo guardamos en otro array (luego los comparamos)
+---------------------------------------------------------------------------------------
+        for (i=0; i<frase.length(); i++){
+            vector[frase.length()-i-1]=frase.charAt(i);
+		reves = String.valueOf(vector);
+
+---------------------------------------------------------------------------------------
+
+MATRIUS
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
+//Cargar una matriu [5][5] con nr de 1 al 25
+---------------------------------------------------------------------------------------
+	for (int i = 0; i < matriu.length; i++) {
+	            for (int j = 0; j < matriu[i].length; j++) {
+	                matriu[i][j] = valor++;
+
+---------------------------------------------------------------------------------------
+//Imprimir en una matriu [][] la tabla de multiplicar
+---------------------------------------------------------------------------------------
+        for (int i = 0; i < matriu.length; i++) {
+            for (int j = 0; j < matriu[i].length; j++) {
+                matriu[i][j] = (i + 1) * (j + 1);
+
+---------------------------------------------------------------------------------------
+//Comparar si unas notas en una matriz son entre las maximas y las minimas
+---------------------------------------------------------------------------------------
+	float minima=10;
+	if (notes[i][j]>maxima) maxima=notes[i][j];
+	if (notes[i][j]<minima) minima=notes[i][j];
+---------------------------------------------------------------------------------------
+//Llenar una matriz [][]con notas
+---------------------------------------------------------------------------------------
+        for (i = 0; i < notes.length; i++) {
+            System.out.println("Introdueix les notes de l'estudiant " + (i+1));
+            minima=10;
+            maxima=0;
+            suma=0;
+            for (j = 0; j < notes[i].length; j++) {
+                System.out.print("Nota assignatura " + (j+1) + ": ");
+                notes[i][j] = entrada.nextFloat();
+----------------------------
+//IMPRIMIR una matriu[][]
+-------------------------
+	for (i = 0; i < sous.length; i++) {
+            for (j = 0; j < sous[0].length; j++) {
+                System.out.print(sous[i][j] + " ");
+            }
+            System.out.println("");
+        }
+---------------------------------------------------------------------------------------
+//Se guarda en unas filas[i][] unos salarios dependiendo si en la columna[][j] hay 0/1
+---------------------------------------------------------------------------------------
+	for (i = 0; i < sous.length; i++) {
+            // Per cada persona demanem el gènere i el sou
+            for (j = 0; j < sous[0].length; j++) {
+                if (j == 0) {
+                    System.out.print("Indica el gènero (0 per a home y 1 per a 	dona) de la persona " + (i + 1) + ": ");
+                    sous[i][j] = entrada.nextFloat();
+                }
+                if (j == 1) {
+                    System.out.print("Indica el sou: ");
+                    sous[i][j] = entrada.nextFloat();
+                }
+
+---------------------------------------------------------------------------------------
+//Diferenciamos si en una columna [][j] hay un 0/1 
+---------------------------------------------------------------------------------------
+	for (i = 0; i < sous.length; i++) {
+            if (sous[i][0] == 0.0) {
+                nhomes++;
+                sumah += sous[i][1];
+            }
+            if (sous[i][0] == 1.0) {
+                ndones++;
+                sumad += sous[i][1];
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+//ARRAY LISTS
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+//Inicializar un ARRAYLIST<>
+---------------------------------------------------------------------------------------
+	ArrayList<String> comandes = new ArrayList<>();
+
+---------------------------------------------------------------------------------------
+//Affegir un String a un ArrayList <>
+---------------------------------------------------------------------------------------
+	System.out.println("Introdueix la comanda:");
+                    String comanda = scanner.next();
+                    comandes.add(comanda);
+
+---------------------------------------------------------------------------------------
+//Print two arraylists side by side with a for()
+---------------------------------------------------------------------------------------
+	for(int i=0; i<agenda.size();i++) {
+	    		 System.out.println(agenda.get(i) + "\t"+  numeros.get(i));
+
+---------------------------------------------------------------------------------------
+//Comprobar si hay duplicados en una lista de palabras antes de introducir una nueva
+---------------------------------------------------------------------------------------
+	paraula = scanner.next();
+            if (!paraula.equals("fi") && !paraules.contains(paraula)) {
+                paraules.add(paraula);
+
+---------------------------------------------------------------------------------------
+//Reverse an arraylist of any kind
+---------------------------------------------------------------------------------------
+	 Collections.reverse(paraules);
+-------------------
+//Different version
+-------------------
+	for (int i = paraules.size() - 1; i >= 0; i--) {
+            System.out.print(paraules.get(i) + " ");
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+//HASH MAPS
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
+// Creating a HashMap with Integer keys and String values
+---------------------------------------------------------------------------------------
+	Map<Integer, String> myMap = new HashMap<>();
+	myMap.put(1, "One");
+        myMap.put(2, "Two");
+        myMap.put(3, "Three");
+---------------------------------------------------------------------------------------
+// Retrieving values based on keys
+---------------------------------------------------------------------------------------
+        System.out.println("Value corresponding to key 2: " + myMap.get(2));
+
+
+---------------------------------------------------------------------------------------
+// Iterating through the HashMap using .keySet
+---------------------------------------------------------------------------------------
+        for (String jugador : puntuacions.keySet()) {
+             System.out.println(jugador + ": " + puntuacions.get(jugador));
+
+---------------------------------------------------------------------------------------
+// Search for a key in a hashmap
+---------------------------------------------------------------------------------------
+	String paraulaATraduir = scanner.next();
+                    if (traduccions.containsKey(paraulaATraduir)) {
+                        System.out.println("Traducció: " + traduccions.get(paraulaATraduir));
+                    }
+
+
+---------------------------------------------------------------------------------------
+// Iterate through a hashmap and saves the key in a parametre
+---------------------------------------------------------------------------------------
+	for (String producteInventari : inventari.keySet()) {
+                 int quantitatInventari = inventari.get(producteInventari);
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+/*
+* EXAMEN
+*/
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+public class actividades_B {
+	
+	 public static void main(String[] args){
+		 Scanner scanner = new Scanner(System.in);
+	        
+         int j, valor = 10, suma=0;
+         boolean trobat=false, parell=true;
+         int[] vectora= {6,7,4,8};
+         int [] vectorb;
+         
+         for (j=0; j<vectora.length; j++) {
+        	 if (vectora[j] == valor) {
+        		 trobat= true;
+        	 }
+         }
+         vectorb=vectora;
+         
+         multiplicaVector(vectorb,valor);
+         parell= esParell(sumaVector(vectora));
+         System.out.println("Array vectora: " + Arrays.toString(vectora));
+         System.out.println("Array vectorb: " + Arrays.toString(vectorb));
+         System.out.println("Variable j: " + j);
+         System.out.println("Variable suma: " +  suma);
+         System.out.println("Variable parell: " +  parell);
+         System.out.println("Variable trobat: " +  trobat);    
+    }
+	public static boolean esParell(int valor) {
+		// TODO Auto-generated method stub
+		boolean trobat=false;
+		if (valor%2==0) {
+			trobat=true;
+			
+		}
+		return trobat;
+	}
+
+	public static int sumaVector(int[] vectorc) {
+		// TODO Auto-generated method stub
+		int suma=0, j;
+		for(j=0; j<vectorc.length;j++) {
+			suma+=vectorc[j];			
+		}
+		return suma;
+	}
+
+	public static void multiplicaVector(int[] vectorc, int valor) {
+		// TODO Auto-generated method stub
+		int j;
+		valor=valor*5;
+		for(j=vectorc.length-1; j>=0;j--) {
+			vectorc[j]=vectorc[j]*valor;
+		}
+		System.out.println("Arrays vectorc: " + Arrays.toString(vectorc));
+	}	 
+} 
+---------------------------------------------------------------------------------------
+Arrays vectorc: [300, 350, 200, 400]
+Array vectora: [300, 350, 200, 400]
+Array vectorb: [300, 350, 200, 400]
+Variable j: 4
+Variable suma: 0
+Variable parell: true
+Variable trobat: false
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+//Funcion para averiaguar el maximo entre 3 numeros.
+---------------------------------------------------------------------------------------
+public static int maxim(int a, int b) {
+        return a > b ? a : b;    
+    }
+public static void main(String[] args) {
+  max = maxim(a, b);
+  max = maxim(max, c);
+}
+---------------------------------------------------------------------------------------
+Programa que llig una data introduint el dia, mes i any per separat i ens diu si la data és correcta o no.
+---------------------------------------------------------------------------------------
+
+public static boolean dataCorrecta(int dia, int mes, int any) {
+        return (dia >= 1 && dia <= 30 && mes >= 1 && mes <= 12);
+    }
+
+---------------------------------------------------------------------------------------
+Programa que escriga la taula de multiplicar d'un número introduït per teclat.
+---------------------------------------------------------------------------------------
+
+public static void taula_multiplicar(int n) {
+System.out.println("TAULA DEL NÚMERO " + n);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+}
+public static void main(String[] args) {
+// Mostrar la taula de N            
+        taula_multiplicar(n);
+        entrada.close();
+    }
+
+---------------------------------------------------------------------------------------
+Programa que calcula el percentatge de descompte que ens han fet en comprar alguna cosa.
+---------------------------------------------------------------------------------------
+
+public static double percentatge_dte(double preuIni, double preuVenda) {
+        return 100 * (1.0 - (preuVenda / preuIni));
+    }
+
+---------------------------------------------------------------------------------------
+Escriu una funció que mostre per pantalla un triangle com el de l'exemple. Haurà de rebre dos
+paràmetres: el caràcter que es desitja imprimir i el nombre de línies del triangle.
+---------------------------------------------------------------------------------------
+
+public static void imprimirPiramid(char car, int lin) {
+        int numCar, i, j, k;
+        numCar=1;
+        for (i=1; i<=lin; i++){
+            for (j=1; j<=lin-i; j++){
+                System.out.print(" ");
+            }
+            for (k=1; k<=numCar; k++){
+                System.out.print (car);
+            }
+            System.out.println (" ");
+            numCar += 2;
+        }      
+    }
+
+
+
+public static void main(String[] args) {
+        // Declaració de variables
+        int linies;
+        char caracter;
+        Scanner entrada = new Scanner (System.in);
+        
+        // Petició de dades
+        System.out.print("Introdueix el caràcter per a fer la piràmide: ");
+        caracter = entrada.nextLine().charAt(0);;
+        System.out.print("Introdueix el número de línies per a fer la piràmide: ");
+        linies = entrada.nextInt();
+        // Dibuixar la piràmide
+        imprimirPiramid(caracter, linies);
+        entrada.close();
+    }
+}
+
+---------------------------------------------------------------------------------------
+Programa que ens demana números enters fins que s'introduïsca el 0, dient-nos,
+ * per a cada número introduït si és primer o no. Cal recordar que un número és primer si és divisible
+ * per si mateix i per 1.
+---------------------------------------------------------------------------------------
+
+public static boolean numeroPrimer(int n) {
+        
+        // Declaració de variables
+        int j;
+        boolean esPrimer=true;        
+        j=2;
+        while ((j<=n/2) && (esPrimer)) {
+            if (n%j == 0){
+                esPrimer=false;
+            }
+            j++;
+        }
+        return esPrimer;
+    }
+
+
+
+public static void main(String[] args) {   
+        // Declaració de variables
+        int numero=Integer.MAX_VALUE;
+        Scanner entrada = new Scanner(System.in);
+        do{
+            // Petició de dades
+            System.out.print("Introdueix un valor enter (0 per a finalitzar): ");
+            numero = entrada.nextInt();     
+            if (numero!=0){
+                    if (numeroPrimer(numero)){
+                        System.out.println("El número és primer.");
+                    } else {
+                        System.out.println("El número no és primer.");
+                    }
+            }
+            
+        }while(numero!=0);
+        entrada.close();
+    }
+}
+
+---------------------------------------------------------------------------------------
+// Funció per a calcular la longitud de la circunferència
+---------------------------------------------------------------------------------------
+    public static double circunferencia(double r) {
+        return r * Math.PI;
+    }
+
+---------------------------------------------------------------------------------------
+// Funció per a calcular el àrea del cercle
+---------------------------------------------------------------------------------------
+
+    public static double area(double r) {
+        return r * r * Math.PI;
+    }
+
+---------------------------------------------------------------------------------------
+ // Funció per a calcular el volum de l'esfera
+---------------------------------------------------------------------------------------
+
+    public static double volum(double r) {
+        return r * r * r * Math.PI * 4 / 3;
+    }
+
+---------------------------------------------------------------------------------------
+Numeros capicua
+// Girem el número per a comprovar després si és igual al original.
+---------------------------------------------------------------------------------------
+        reves = 0;
+        auxiliar = numero;
+        while (auxiliar>0){
+            reves = (reves*10) + (auxiliar%10);     // Extrau digit més baix i el posa com el més alt en reves
+            auxiliar = auxiliar/10;  
+
+
+
+

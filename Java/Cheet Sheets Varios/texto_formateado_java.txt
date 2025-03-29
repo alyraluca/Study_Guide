@@ -1,0 +1,44 @@
+Sequencia de fuita / FORMATEAR TEXTO
+
+\n -----> Nova Línia.
+\t -----> Tabulador./tab
+\r -----> Reculada de Carro.
+\f -----> Començament de Pàgina./form feed
+\b -----> Esborrat a l'Esquerra./ backspace
+\\ -----> El caràcter barra inversa ( \ ).
+\' -----> El caràcter preval simple ( ' ).
+\" -----> El caràcter preval doble o bi-prima ( " ).
+
+
+System.out.printf("Bandera de %5d cm2: %5.2f €\n", alt * ample, preuTela);
+		%5d: Especifica un número entero con un ancho mínimo de 5 caracteres, rellenando con espacios si es necesario.
+		%5.2f: Especifica un número de punto flotante con un ancho mínimo de 5 caracteres y 2 decimales, rellenando con espacios si es necesario.
+        
+System.out.printf("%s: %5.2f €\n", cadenaEscut, preuEscut);
+	Aquí se utiliza un marcador de posición %s para imprimir una cadena (en este caso, cadenaEscut) y luego el precio (preuEscut) en el mismo formato.
+
+System.out.printf("Depeses d'enviament: %5.2f €\n", 3.25);
+	Imprime el texto "Depeses d'enviament:" seguido del valor 3.25 formateado como un número de punto flotante con dos decimales y el símbolo de euro.
+
+System.out.printf("Total: %5.2f €\n", preuFinal);
+	Imprime el texto "Total:" seguido del valor de preuFinal formateado de la misma manera.
+
+
+‘\t’ : Insertar un tabulador
+	System.out.println("Columna 1\tColumna 2");
+	Columna 1	Columna 2
+
+Comilla simple (\') y Comilla doble (\"): Escapa las comillas.
+	System.out.println("Comilla simple: '\'' Comilla doble: \"\"");
+	Comilla simple: ' Comilla doble: ""
+
+Carácter de escape (\\): Muestra un backslash
+	System.out.println("Un backslash: \\");
+	Un backslash: \
+
+Alarma (\u0007): Emite un sonido de alarma
+	System.out.println("¡Esto es una alarma!\u0007");
+
+Unicode (\u####): Inserta un carácter Unicode según su valor hexadecimal
+	System.out.println("Carácter especial: \u00A9");
+	Carácter especial: ©
