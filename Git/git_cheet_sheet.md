@@ -202,6 +202,12 @@ $ eval "$(ssh-agent -s)" && ssh-add ~/.ssh/testkey
 Once we pushed changes to github from a different branch (`branching`), on github.com we get asked if we want to `open a pull request`.
 The owner gets to `merge pull request`
 
+**9. Enable long path names**
+
+```
+$ git config --global core.longpaths true
+```
+
 -----------------------------
 ### Curso git 5h
 
